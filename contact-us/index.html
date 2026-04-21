@@ -244,6 +244,56 @@
       text-align: center;
     }
 
+
+    .form-panel {
+      margin: 1.25rem 0 1.4rem;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #0f1f2a;
+    }
+
+    .styled-form {
+      display: grid;
+      gap: 0.7rem;
+      margin-top: 0.6rem;
+    }
+
+    .styled-form label {
+      font-weight: 700;
+      color: #dce6f2;
+    }
+
+    .styled-form input,
+    .styled-form textarea,
+    .styled-form select {
+      width: 100%;
+      border: 1px solid #355168;
+      background: #0b151d;
+      color: #f4f7fb;
+      border-radius: 10px;
+      padding: 0.72rem 0.8rem;
+      font: inherit;
+    }
+
+    .styled-form textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.4rem;
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 0.93rem;
+      margin-top: 0.15rem;
+    }
+
     @media (max-width: 900px) {
       .trust-grid {
         grid-template-columns: 1fr;
@@ -291,7 +341,7 @@
       </nav>
       <div class="auth-buttons">
         <a class="btn" href="../login/">Logg inn</a>
-        <a class="btn" href="../login/#register">Registrer deg</a>
+        <a class="btn" href="/go/">Registrer deg</a>
       </div>
     </div>
   </header>
@@ -302,6 +352,35 @@
 <h1>Kontakt Oss – Campeonbet Casino</h1>
 
 <p>Velkommen til den offisielle kontaktsiden for Campeonbet Casino i Norge. Vi er stolte av å tilby våre norske spillere en førsteklasses spillopplevelse, og en viktig del av det er å sørge for at du alltid kan nå oss når du trenger hjelp. Enten du har spørsmål om kontoen din, trenger assistanse med innskudd og uttak, eller bare ønsker mer informasjon om våre kampanjer og tilbud, er vi her for deg. Vår dedikerte supportavdeling er klar til å hjelpe deg raskt og effektivt.</p>
+
+
+<div class="form-panel" id="contact-form">
+  <h2>Send oss en melding</h2>
+  <form class="styled-form" action="#" method="post" novalidate>
+    <label for="contact-name">Fullt navn</label>
+    <input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Ditt navn" required />
+
+    <label for="contact-email">E-postadresse</label>
+    <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="navn@epost.no" required />
+
+    <label for="contact-subject">Emne</label>
+    <select id="contact-subject" name="subject" required>
+      <option value="" selected disabled>Velg emne</option>
+      <option value="konto">Konto og verifisering</option>
+      <option value="betaling">Innskudd og uttak</option>
+      <option value="bonus">Bonuser og kampanjer</option>
+      <option value="annet">Annet</option>
+    </select>
+
+    <label for="contact-message">Melding</label>
+    <textarea id="contact-message" name="message" placeholder="Skriv meldingen din her" required></textarea>
+
+    <div class="form-actions">
+      <button class="btn" type="submit">Send melding</button>
+    </div>
+    <p class="form-note">Vi svarer vanligvis innen 24 timer.</p>
+  </form>
+</div>
 
 <h2>Vårt Supportteam</h2>
 

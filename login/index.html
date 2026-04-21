@@ -244,6 +244,56 @@
       text-align: center;
     }
 
+
+    .form-panel {
+      margin: 1.25rem 0 1.4rem;
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #0f1f2a;
+    }
+
+    .styled-form {
+      display: grid;
+      gap: 0.7rem;
+      margin-top: 0.6rem;
+    }
+
+    .styled-form label {
+      font-weight: 700;
+      color: #dce6f2;
+    }
+
+    .styled-form input,
+    .styled-form textarea,
+    .styled-form select {
+      width: 100%;
+      border: 1px solid #355168;
+      background: #0b151d;
+      color: #f4f7fb;
+      border-radius: 10px;
+      padding: 0.72rem 0.8rem;
+      font: inherit;
+    }
+
+    .styled-form textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.4rem;
+    }
+
+    .form-note {
+      color: var(--muted);
+      font-size: 0.93rem;
+      margin-top: 0.15rem;
+    }
+
     @media (max-width: 900px) {
       .trust-grid {
         grid-template-columns: 1fr;
@@ -291,7 +341,7 @@
       </nav>
       <div class="auth-buttons">
         <a class="btn" href="../login/">Logg inn</a>
-        <a class="btn" href="../login/#register">Registrer deg</a>
+        <a class="btn" href="/go/">Registrer deg</a>
       </div>
     </div>
   </header>
@@ -299,10 +349,32 @@
   <main>
     <section class="page-content">
       <div class="container seo-block">
-<div id="register"></div>
 <h1>Campeonbet Casino – Offisiell Innlogging i Norge</h1>
 
 <p>Velkommen til Campeonbet Casino, din offisielle destinasjon for nettspill i Norge. Vi er stolte av å tilby norske spillere en førsteklasses spillopplevelse med et bredt utvalg av casinospill, attraktive bonuser og en trygg og sikker spillplattform. På denne siden finner du alt du trenger å vite om hvordan du logger inn på Campeonbet Casino, og hva vi kan tilby deg som registrert spiller hos oss.</p>
+
+
+<div class="form-panel" id="register">
+  <h2>Logg inn på kontoen din</h2>
+  <form class="styled-form" action="#" method="post" novalidate>
+    <label for="login-email">E-postadresse</label>
+    <input id="login-email" name="email" type="email" autocomplete="email" placeholder="navn@epost.no" required />
+
+    <label for="login-password">Passord</label>
+    <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Skriv inn passord" required />
+
+    <label for="login-remember">
+      <input id="login-remember" name="remember" type="checkbox" style="width:auto; margin-right:8px;" />
+      Husk meg på denne enheten
+    </label>
+
+    <div class="form-actions">
+      <button class="btn" type="submit">Logg inn</button>
+      <a class="btn" href="/go/">Registrer deg</a>
+    </div>
+    <p class="form-note">Ved innlogging godtar du våre vilkår og personvernpolicy.</p>
+  </form>
+</div>
 
 <h2>Hva er Campeonbet Casino?</h2>
 
